@@ -31,6 +31,7 @@ entry_points="""
 [console_scripts]
 {program} = cli.cli:main
 """.format(program = program),
+```
 
 __requirements__
 
