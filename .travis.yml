@@ -8,6 +8,8 @@ python:
 before_install:
 - pip install pytest
 - pip install coveralls
+- pip install pytest-cov
+- python setup.py develop
 
 script:
 - py.test --cov-report=term --cov=cli tests
