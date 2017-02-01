@@ -1,8 +1,16 @@
+import sys
 import argparse
 from . import _program
+from clint.textui import puts, indent, colored
 
-def main():
+def main(args = sys.argv):
     parser = argparse.ArgumentParser(prog = _program)
+
+    parser.add_argument("--square",
+                        help="Used for testing",
+                        type=int,
+                        default=None)
+
     parser.add_argument("--int_value",
                         help="display a square of a given number",
                         type=int)
@@ -29,13 +37,17 @@ def main():
                        help = "mutually exclusive option",
                        action = "store_true")
 
-    args = parser.parse_args()
+    args = parser.parse_args(args)
 
-    print("Arguments")
-    print("value: " + str(args.int_value))
-    print("value: " + str(args.float_value))
-    print("flag: " + str(args.flag))
-    print("rating: " + str(args.rating))
+    if args.square:
+        print(args.square**2)
+    else:
+        with indent(4):
+            puts(colored.blue("Arguments"))
+            puts(colored.green("value: ") + str(args.int_value))
+            puts(colored.green("value: ") + str(args.float_value))
+            puts(colored.green("flag: ") + str(args.flag))
+            puts(colored.green("rating: ") + str(args.rating))
 
 if __name__ == '__main__':
     main()

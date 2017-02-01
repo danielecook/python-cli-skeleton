@@ -17,8 +17,8 @@ setup(name=_program,
       license='MIT',
       entry_points="""
       [console_scripts]
-      {program} = cli.cli:main
-      """.format(program = program),
+      {program} = cli.command:main
+      """.format(program = _program),
       keywords=[],
       tests_require=['pytest', 'coveralls'],
       zip_safe=False)
