@@ -5,5 +5,8 @@ python:
 - pypy
 
 
+before_script:
+- pip install pytest coveralls
+
 script:
 - py.test --cov-report=term --cov=cli tests
