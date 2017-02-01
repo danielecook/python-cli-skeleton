@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/danielecook/python-cli-skeleton.svg?branch=master)](https://travis-ci.org/danielecook/python-cli-skeleton) [![Coverage Status](https://coveralls.io/repos/github/danielecook/python-cli-skeleton/badge.svg?branch=master)](https://coveralls.io/github/danielecook/python-cli-skeleton?branch=master)
+
 # python-cli-skeleton
 
 A simple python command line interface skeleton project. Uses argparse and can be installed and invoked using setuptools.
