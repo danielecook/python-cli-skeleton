@@ -5,8 +5,9 @@ python:
 - pypy
 
 
-before_script:
-- pip install pytest coveralls
+before_install:
+- pip install pytest
+- pip install coveralls
 
 script:
 - py.test --cov-report=term --cov=cli tests
