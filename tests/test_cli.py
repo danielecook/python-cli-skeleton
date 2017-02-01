@@ -1,5 +1,4 @@
 from cli import command
-from test_utilities import Capturing
 from tests.test_utilities import Capturing
 
 def test_square():
