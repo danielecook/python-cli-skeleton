@@ -1,17 +1,24 @@
 from setuptools import setup
 import glob
+import os
 
-setup(name='cli-name',
-      version='0.0.1',
+with open('requirements.txt') as f:
+    required = [x for x in f.read().splitlines() if not x.startswith("#")]
+
+from cli import __version__, _program
+
+setup(name=_program,
+      version=__version__,
       packages=['cli'],
       description='Skeleton commandline python project',
       url='https://github.com/danielecook/python-cli-skeleton',
-      author='Daniel Cook',
-      author_email='danielecook@gmail.com',
+      author='YOUR NAME',
+      author_email='youremail@email.com',
       license='MIT',
       entry_points="""
       [console_scripts]
-      cli = cli.cli:main
-      """,
-      install_requires=["docopt", "clint"],
+      {program} = cli.cli:main
+      """.format(program = program),
+      keywords=[],
+      tests_require=['pytest', 'coveralls'],
       zip_safe=False)
