@@ -1,5 +1,5 @@
 from subprocess import Popen, PIPE
-from StringIO import StringIO
+from six import StringIO
 import sys
 
 
