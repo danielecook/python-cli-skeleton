@@ -3,7 +3,7 @@ import argparse
 from . import _program
 from clint.textui import puts, indent, colored
 
-def main(args = sys.argv):
+def main(args = sys.argv[1:]):
     parser = argparse.ArgumentParser(prog = _program)
 
     parser.add_argument("--square",
@@ -44,8 +44,8 @@ def main(args = sys.argv):
     else:
         with indent(4):
             puts(colored.blue("Arguments"))
-            puts(colored.green("value: ") + str(args.int_value))
-            puts(colored.green("value: ") + str(args.float_value))
+            puts(colored.green("int value: ") + str(args.int_value))
+            puts(colored.green("float value: ") + str(args.float_value))
             puts(colored.green("flag: ") + str(args.flag))
             puts(colored.green("rating: ") + str(args.rating))
 
