@@ -39,3 +39,7 @@ Add requirements to the `requirements.txt` file. The setup file parses this file
 __travis-ci__
 
 A `.travis.yml` file is included and setup for Python. You need to configure this further, however, at `[travis-ci.org](travis-ci.org)`.
+
+__coveralls__
+
+Support for coveralls is also provided. Please see [coveralls.io](https://coveralls.io/) for more information.
