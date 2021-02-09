@@ -42,7 +42,7 @@ entry_points="""
 
 __requirements.txt__
 
-Add any modules you want installed to the `requirements.txt` file. The setup file parses this file before installation. Currently, `[clint](https://github.com/kennethreitz/clint)` is the only requirement. It is a useful module for adding color, indenting, progress bars, and other useful things to command-line based programs.
+Add any modules you want installed to the `requirements.txt` file. The setup file parses this file before installation. Currently, [`clint`](https://github.com/kennethreitz/clint) is the only requirement. It is a useful module for adding color, indenting, progress bars, and other useful things to command-line based programs.
 
 __travis-ci__
 
